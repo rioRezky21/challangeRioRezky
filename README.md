@@ -1,5 +1,4 @@
-# challangeRioRezky
-# langkah paling pertama untuk selalu melakukan "npm install" sehingga semua depedency yang digunakan oleh aplikasi dapat digunakan
+# Langkah paling pertama untuk selalu melakukan "npm install" sehingga semua depedency yang digunakan oleh aplikasi dapat digunakan
 
 - Challange A berada di folder challange, untuk menjalankan aplikasi menggunakan "node challangeA.js", lalu user akan diminta memasukan Integer yang diinginkan, lalu aplikasi akan secara otomatis melakukan konversi.
   
