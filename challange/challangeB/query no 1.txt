@@ -1,0 +1,51 @@
+create table user_role(
+	id integer PRIMARY KEY,
+	role VARCHAR(255) not null unique
+);
+
+
+create table users (
+	Id INT NOT NULL PRIMARY KEY,
+	email VARCHAR(255),
+	password VARCHAR(255),
+	role VARCHAR NOT NULL DEFAULT 'Mahasiswa',
+	CONSTRAINT fk_user_role FOREIGN KEY (role) REFERENCES user_role (role)
+);
+
+CREATE TABLE mahasiswa (
+	NIM INT NOT NULL PRIMARY KEY,
+	nama VARCHAR(255),
+	alamat VARCHAR(255),
+	tanggal_lahir DATE,
+	jurusan VARCHAR(255)
+);
+
+CREATE TABLE dosen (
+	id INT NOT NULL PRIMARY KEY,
+	nama VARCHAR(255)
+);
+
+CREATE TABLE mata_kuliah (
+	id INT PRIMARY KEY,
+	nama_mata_kuliah VARCHAR(255)
+);
+
+CREATE TABLE mata_kuliah_junction (
+	id_mata_kuliah INT NOT NULL,
+	nim INT NOT NULL,
+	CONSTRAINT mata_kuliah_pk PRIMARY KEY (id_mata_kuliah, nim),
+	CONSTRAINT fk_id_mata_kuliah FOREIGN KEY (id_mata_kuliah) REFERENCES mata_kuliah (id),
+	CONSTRAINT fk_nim_mahasiswa FOREIGN KEY (nim) REFERENCES mahasiswa (NIM)
+);
+
+CREATE TABLE data_nilai (
+	nim INT ,
+	id_mata_kuliah INT,
+	id_dosen INT,
+	nilai INT,
+	keterangan VARCHAR(255),
+	CONSTRAINT data_nilai_pk PRIMARY KEY (nim, id_mata_kuliah),
+	CONSTRAINT fk_nim_mahasiswa FOREIGN KEY (nim) REFERENCES mahasiswa (nim),
+	CONSTRAINT fk_id_mata_kuliah FOREIGN KEY (id_mata_kuliah) REFERENCES mata_kuliah (id),
+	CONSTRAINT fk_id_dosen FOREIGN KEY (id_dosen) REFERENCES dosen (id)
+);

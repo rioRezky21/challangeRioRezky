@@ -1,0 +1,7 @@
+SELECT a.* , date_part('year', age(a.tanggal_lahir)) AS umur, b.nama as nama_dosen, c.nama_mata_kuliah as mata_kuliah, d.nilai
+FROM (((data_nilai as d
+JOIN mahasiswa as a ON d.nim = a.nim)
+JOIN dosen as b ON d.id_dosen = b."id")
+JOIN mata_kuliah as c ON d.id_mata_kuliah = c."id")
+WHERE nilai < 70
+ORDER BY nilai DESC

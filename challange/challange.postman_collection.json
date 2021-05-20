@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "25fa9838-ae9b-4977-943a-90b3d1eacf67",
+		"name": "challange",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "delete data nilai",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/dataNilai/1/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dataNilai",
+						"1",
+						"1"
+					]
+				},
+				"description": "param pertama adalah nim\r\nparam kedua adalah kode mata kuliah"
+			},
+			"response": []
+		},
+		{
+			"name": "update data nilai",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_dosen\": 1,\r\n    \"nilai\": 90,\r\n    \"keterangan\": \"memuaskan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/dataNilai/1/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dataNilai",
+						"1",
+						"1"
+					]
+				},
+				"description": "param pertama adalah nim\r\nparam kedua adalah kode mata kuliah\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "post data nilai",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nim\" : 1,\r\n    \"id_mata_kuliah\" : 3,\r\n    \"id_dosen\": 1,\r\n    \"nilai\": 80,\r\n    \"keterangan\": \"memuaskan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/dataNilai",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dataNilai"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

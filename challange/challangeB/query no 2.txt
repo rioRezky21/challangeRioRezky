@@ -1,0 +1,26 @@
+INSERT INTO data_nilai VALUES (1, 1, 1, 75, 'Memuaskan');
+INSERT INTO data_nilai VALUES (2, 1, 1, 80, 'Sangat Memuaskan');
+INSERT INTO data_nilai VALUES (1, 2, 2, 60, 'Cukup');
+INSERT INTO data_nilai VALUES (2, 2, 2, 40, 'Kurang');
+
+INSERT INTO dosen VALUES (2, 'Imam');
+INSERT INTO dosen VALUES (1, 'Tao');
+
+INSERT INTO mahasiswa VALUES (1, 'Rio', 'Bandung', '1994-11-21', 'IPA');
+INSERT INTO mahasiswa VALUES (2, 'oda', 'Bekasi ', '1997-05-19', 'IPS');
+
+INSERT INTO mata_kuliah VALUES (1, 'Bahasa Indonesia');
+INSERT INTO mata_kuliah VALUES (2, 'Bahasa Inggris');
+
+INSERT INTO mata_kuliah_junction VALUES (1, 1);
+INSERT INTO mata_kuliah_junction VALUES (1, 2);
+INSERT INTO mata_kuliah_junction VALUES (2, 1);
+INSERT INTO mata_kuliah_junction VALUES (2, 2);
+
+INSERT INTO user_role VALUES (1, 'Mahasiswa');
+INSERT INTO user_role VALUES (2, 'Dosen');
+
+INSERT INTO users VALUES (1, 'rio.rezky21@gmail.com', 'test123', 'Mahasiswa');
+INSERT INTO users VALUES (2, 'imammaulana@gmail.com', 'test', 'Dosen');
+INSERT INTO users VALUES (3, 'odazioda@gmail.com', 'test', 'Mahasiswa');
+INSERT INTO users VALUES (4, 'taofikrohman@gmail.com', 'test', 'Dosen');
